@@ -16,6 +16,13 @@ mytext = " Quon Phillips, tempor.diam.dictum@icloud.edu Hope Carey, facilisis@ya
 \S = non breakspace
 """
 
+# ---- program to find all emails ----
+textlookfor = r"\w+@\w+\.\w+"
+allresults = re.findall(textlookfor, mytext)
+
+print(allresults)
+print("-------------------------------------------")
+
 # ---- program to find all domains ----
 textlookfor = r"\w+\.\w+"
 allresults = re.findall(textlookfor, mytext)
