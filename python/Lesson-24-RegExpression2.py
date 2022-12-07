@@ -7,14 +7,13 @@ inputfile = open(input_filename, mode='r', encoding='Latin-1')
 resultfile = open(result_filename, mode='w', encoding='Latin-1')
 mytext = inputfile.read()
 
-# ---- program to find all emails ----
-lookfor = r"[\w.-]+@[\w.-]+"
+# ---- program to find all emails, except who have outlook.org on final ----
+lookfor = r"[\w.-]+@(?!outlook\.org)[\w.-]+"
 
 results = re.findall(lookfor, mytext)
 
 for item in results:
     print(item)
+    resultfile.write(item + "\n")
 
-
-
-print("-------------------------------------------")
+print("Total: " + str(len(results)))
