@@ -18,6 +18,8 @@ myimage = pygame.transform.scale(myimage, (100, 100))
 x = 400
 y = 200
 
+
+
 # ------ Main game loop -------------
 while game_over == False:
     for event in pygame.event.get():
