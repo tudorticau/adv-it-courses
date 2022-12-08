@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    # My Web Pages will be listed here
+    "Ansible",
 ]
 
 MIDDLEWARE = [
